@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<title>Switch location options</title>
+
+<body>
+    <h1>Switch location</h1>
+    <h2>Rules</h2>
+    <form id="newRuleForm"></form>
+    <table>
+        <tr>
+            <th>
+                Name
+            </th>
+            <th>
+                Pattern
+            </th>
+            <th>
+                Replacement
+            </th>
+        </tr>
+        <tbody id="rulesTableBody">
+            <tr id="newRuleRow">
+                <td>
+                    <input id="ruleName" required="required" form="newRuleForm" />
+                </td>
+                <td>
+                    <input id="pattern" required="required" form="newRuleForm" />
+                </td>
+                <td>
+                    <input id="replacement" required="required"  form="newRuleForm" />
+                </td>
+                <td>
+                    <button type="submit" form="newRuleForm" >Add rule</button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <script src="options.js"></script>
+</body>
+
+</html>
