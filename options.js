@@ -1,5 +1,6 @@
 (function() {
 	var newRuleForm = document.getElementById("newRuleForm");
+	var rulesFormSubmitBtn = document.getElementById("rulesFormSubmitBtn");
 	var rulesTableBody = document.getElementById("rulesTableBody");
 	var newRuleRow = document.getElementById("newRuleRow");
 	var newRuleName = document.getElementById("ruleName");
@@ -46,9 +47,9 @@
 
 	function renderRuleRow(rule) {
 		var row = document.createElement("tr");
-		var nameNode = createTextNode(rule.name);
-		var patternNode = createTextNode(rule.pattern);
-		var replacementNode = createTextNode(rule.replacement);
+		var nameNode = createEditNode("name", rule);
+		var patternNode = createEditNode("pattern", rule);
+		var replacementNode = createEditNode("replacement", rule);
 		var deleteNode = createDeleteNode(rule, row);
 		row.appendChild(nameNode);
 		row.appendChild(patternNode);
@@ -57,10 +58,27 @@
 		rulesTableBody.insertBefore(row, newRuleRow);
 	}
 
-	function createTextNode(text) {
+	function createEditNode(propertyName, rule) {
 		var node = document.createElement("td");
-		node.appendChild(document.createTextNode(text));
+		var input = document.createElement("input");
+		input.required = true;
+		input.value = rule[propertyName];
+		input.onchange = updateValue.bind(input, propertyName, rule);
+		node.appendChild(input);
 		return node;
+	}
+
+	function updateValue(propertyName, rule) {
+		rule[propertyName] = this.value;
+		var isValid = this.checkValidity();
+		if (!isValid) {
+			setTimeout(function() { //message will disappear immediately without this
+				rulesFormSubmitBtn.click(); //this will only trigger form validation, it will not submit form
+			}, 0);
+			return;
+		}
+		rule[propertyName] = this.value;
+		saveRules();
 	}
 
 	function createDeleteNode(rule, row) {

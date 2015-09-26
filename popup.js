@@ -40,15 +40,4 @@
 		});
 	}
 
-// function () {
-// 	chrome.tabs.query({
-// 		"active": true
-// 	}, function(tabs) {
-// 		console.log(tabs);
-//         btn.innerHTML = "qweqwe";
-// 		chrome.tabs.update(tabs[0].id, {
-// 			url: tabs[0].location
-// 		});
-// 	});
-// };
 })();
