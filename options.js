@@ -84,7 +84,8 @@
 	function createDeleteNode(rule, row) {
 		var node = document.createElement("td");
 		var delBtn = document.createElement("button");
-		delBtn.innerHTML = "Delete";
+		delBtn.title = "Delete";
+        delBtn.className = "deleteRuleBtn";
 		delBtn.onclick = deleteRule.bind(null, rule, row);
 		node.appendChild(delBtn);
 		return node;

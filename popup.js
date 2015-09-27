@@ -35,7 +35,7 @@
 			"active": true
 		}, function(tabs) {
 			chrome.tabs.update(tabs[0].id, {
-				url: tabs[0].url.replace(rule.pattern, rule.replacement)
+				url: tabs[0].url.replace(new RegExp(rule.pattern), rule.replacement)
 			});
 		});
 	}

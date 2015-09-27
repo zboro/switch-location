@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html>
-<title>Switch location options</title>
+
+<head>
+    <title>Switch location options</title>
+    <link rel="stylesheet" href="options.css">
+</head>
 
 <body>
-    <h1>Switch location</h1>
-    <h2>Rules</h2>
+    <h1>Switch location rules</h1>
+    <p>
+        Specify rules you want to use. When rule is applied, regexp specified as 'pattern' will be replaced by 'replacement' in URL of currently selected tab.
+    </p>
     <form id="newRuleForm"></form>
     <form id="rulesForm">
         <button id="rulesFormSubmitBtn" type="submit" style="display:none"></button>
@@ -32,7 +38,7 @@
                         <input id="replacement" required="required" form="newRuleForm" />
                     </td>
                     <td>
-                        <button type="submit" form="newRuleForm">Add rule</button>
+                        <button class="addRuleBtn" type="submit" form="newRuleForm" title="Add rule"></button>
                     </td>
                 </tr>
             </tbody>

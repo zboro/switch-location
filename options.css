@@ -1,0 +1,34 @@
+th {
+    text-align: left;
+}
+
+input {
+    padding: .3em .6em;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-shadow: inset 0 1px 3px #ddd;
+    border-radius: 4px;
+    vertical-align: middle;
+    box-sizing: border-box;
+    width: 330px;
+}
+
+.deleteRuleBtn {
+    background-image: url("delete.png");
+    background-size: 24px;
+    background-color: transparent;
+    border: 0;
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+}
+
+.addRuleBtn {
+    background-image: url("save.svg");
+    background-size: 24px;
+    background-color: transparent;
+    border: 0;
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
+}

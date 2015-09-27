@@ -1,0 +1,38 @@
+h1 {
+    font-size: 14px;
+    margin-bottom: 3px;
+}
+
+ul {
+    list-style: none;
+    padding-left: 0;
+    margin-top: 0;
+}
+
+li {
+    padding: 2px;
+}
+
+button {
+    display: inline-block;
+    padding: 1px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.42857143;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-image: none;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    color: #fff;
+    background-color: #337ab7;
+    border-color: #2e6da4;
+}
+
+button:hover {
+    background-color: #286090;
+    border-color: #204d74;
+}
