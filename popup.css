@@ -7,7 +7,7 @@ ul {
     list-style: none;
     padding-left: 0;
     margin-top: 0;
-    width: 227px;
+    width: 300px;
 }
 
 li {
@@ -21,7 +21,7 @@ button {
     font-size: 14px;
     font-weight: 400;
     line-height: 1.42857143;
-    text-align: center;
+    text-align: left;
     white-space: nowrap;
     vertical-align: middle;
     cursor: pointer;
@@ -31,6 +31,9 @@ button {
     color: #fff;
     background-color: #337ab7;
     border-color: #2e6da4;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    text-align: left;
 }
 
 button:hover {
@@ -39,7 +42,7 @@ button:hover {
 }
 
 .switchButton {
-    width: 170px;
+    width: 243px;
     margin-right: 2px;
 }
 
@@ -55,4 +58,16 @@ button:hover {
     background-repeat: no-repeat;
     height: 24px;
     width: 24px;
+}
+
+.incognitoBtn,
+.newTabBtn {
+    background-color: #22547F;
+    border-color: #164063;
+}
+
+.incognitoBtn:hover,
+.newTabBtn:hover {
+    background-color: #0D3150;
+    border-color: #052138;
 }
