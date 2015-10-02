@@ -45,6 +45,7 @@
 	function createIncognitoButton(rule) {
 		var button = document.createElement("button");
 		button.className = "incognitoBtn";
+		button.title = "Open in incognito";
 		button.onclick = openIncognito.bind(null, rule);
 		return button;
 	}
