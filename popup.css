@@ -7,6 +7,7 @@ ul {
     list-style: none;
     padding-left: 0;
     margin-top: 0;
+    width: 227px;
 }
 
 li {
@@ -35,4 +36,23 @@ button {
 button:hover {
     background-color: #286090;
     border-color: #204d74;
+}
+
+.switchButton {
+    width: 170px;
+    margin-right: 2px;
+}
+
+.newTabBtn {
+    padding: 1px 7px;
+    margin-right: 2px;
+}
+
+.incognitoBtn {
+    background-image: url("incognito.png");
+    background-size: 24px;
+    border: 0;
+    background-repeat: no-repeat;
+    height: 24px;
+    width: 24px;
 }
