@@ -1,4 +1,4 @@
-#Switch location
+# Switch location
 
 Chrome extension that allows user to change URL in current tab with with user defined replaces.
 
