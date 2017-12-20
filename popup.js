@@ -52,7 +52,8 @@
 
 	function switchPage(rule) {
 		chrome.tabs.query({
-			"active": true
+			active: true,
+			currentWindow: true
 		}, function(tabs) {
 			chrome.tabs.update(tabs[0].id, {
 				url: tabs[0].url.replace(new RegExp(rule.pattern), rule.replacement)
@@ -62,7 +63,8 @@
 
 	function openNewTab(rule) {
 		chrome.tabs.query({
-			"active": true
+			active: true,
+			currentWindow: true
 		}, function(tabs) {
 			chrome.tabs.create({
 				url: tabs[0].url.replace(new RegExp(rule.pattern), rule.replacement)
@@ -72,7 +74,8 @@
 
 	function openIncognito(rule) {
 		chrome.tabs.query({
-			"active": true
+			active: true,
+			currentWindow: true
 		}, function(tabs) {
 			chrome.windows.create({
 				"url": tabs[0].url.replace(new RegExp(rule.pattern), rule.replacement),
